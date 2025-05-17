@@ -2,10 +2,11 @@
 
 ## Project structure
 
+```sh
 |
 |- backend/ (fastify API)
 |- client/ (React SPA)
-|- docker-compose.yml
+```
 
 ## Local development
 
