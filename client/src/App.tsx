@@ -1,34 +1,23 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import './App.css'
+import { lazy } from 'react'
+
+const TodoApp = lazy(() => import('./TodoApp/TodoApp'))
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR and fast refresh
-          omg
-        </p>
-      </div>
-      <p className="read-the-docs">Im so cool!</p>
+      <header>Yenno - Todo</header>
+      <hr />
+      <main>
+        <section>
+          <TodoApp />
+        </section>
+      </main>
+      <footer>
+        <button>+</button>
+      </footer>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
